@@ -202,18 +202,18 @@ class StudiesErrorBoundary extends React.Component<
   { children: ReactNode },
   { hasError: boolean }
 > {
-  state = { hasError: false };
+  override state = { hasError: false };
 
-  static getDerivedStateFromError() {
+  static override getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, info: ErrorInfo) {
+  override componentDidCatch(error: Error, info: ErrorInfo) {
     void error;
     void info;
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="border-t border-border py-12 text-sm text-muted-foreground" role="status">

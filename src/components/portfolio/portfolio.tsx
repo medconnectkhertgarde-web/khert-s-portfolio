@@ -78,7 +78,7 @@ function Hero() {
       <div className="grid gap-10 md:grid-cols-[1fr_14rem] md:items-start md:gap-16">
         <div>
           <p className="mb-5 font-mono text-xs uppercase text-muted-foreground">Independent researcher · Philippines</p>
-          <h1 className="max-w-3xl text-[clamp(2.6rem,8vw,6.7rem)] font-semibold leading-[0.92] text-foreground">
+          <h1 className="max-w-3xl text-[2.65rem] font-semibold leading-[0.92] text-foreground sm:text-6xl lg:text-[6.7rem]">
             Khert Laguna Garde
           </h1>
           <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-foreground sm:text-base">
