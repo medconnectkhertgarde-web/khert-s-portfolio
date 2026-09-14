@@ -204,7 +204,7 @@ class StudiesErrorBoundary extends React.Component<
 > {
   override state = { hasError: false };
 
-  static override getDerivedStateFromError() {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
