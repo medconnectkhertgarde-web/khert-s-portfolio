@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState, type ErrorInfo, type ReactNode } from "react";
+import React, { Suspense, useEffect, useState, type ErrorInfo, type ReactNode } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowDownToLine, ArrowUpRight, FileText, LoaderCircle } from "lucide-react";
 
@@ -208,7 +208,10 @@ class StudiesErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  componentDidCatch(_error: Error, _info: ErrorInfo) {}
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    void error;
+    void info;
+  }
 
   render() {
     if (this.state.hasError) {
