@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      clinical_studies: {
+        Row: {
+          category: string
+          created_at: string
+          filename: string | null
+          gdrive_file_id: string | null
+          id: string
+          is_published: boolean
+          published_at: string | null
+          slug: string
+          sort_order: number
+          summary: string
+          title: string
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          filename?: string | null
+          gdrive_file_id?: string | null
+          id?: string
+          is_published?: boolean
+          published_at?: string | null
+          slug: string
+          sort_order?: number
+          summary?: string
+          title: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          filename?: string | null
+          gdrive_file_id?: string | null
+          id?: string
+          is_published?: boolean
+          published_at?: string | null
+          slug?: string
+          sort_order?: number
+          summary?: string
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
